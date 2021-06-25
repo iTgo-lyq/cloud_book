@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainNavigation">
+
+    <navigation
+        android:id="@+id/mainNavigation"
+        app:startDestination="@id/bookShelfFragment">
+        <fragment
+            android:id="@+id/bookShelfFragment"
+            android:name="com.itgo.book_cloud.ui.home.subview.BookShelfFragment"
+            android:label="fragment_book_shelf"
+            tools:layout="@layout/fragment_book_shelf">
+            <action
+                android:id="@+id/action_bookShelfFragment_to_recommendFragment"
+                app:destination="@id/recommendFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/folderFragment"
+            android:name="com.itgo.book_cloud.ui.home.subview.FolderFragment"
+            android:label="fragment_folder"
+            tools:layout="@layout/fragment_folder" >
+            <action
+                android:id="@+id/action_folderFragment_to_bookShelfFragment"
+                app:destination="@id/bookShelfFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/recommendFragment"
+            android:name="com.itgo.book_cloud.ui.home.subview.RecommendFragment"
+            android:label="fragment_recommend"
+            tools:layout="@layout/fragment_recommend" >
+            <action
+                android:id="@+id/action_recommendFragment_to_folderFragment"
+                app:destination="@id/folderFragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_epubReaderActivity"
+            app:destination="@id/epubReaderActivity" />
+        <action
+            android:id="@+id/action_global_pdfReaderActivity"
+            app:destination="@id/pdfReaderActivity" />
+        <action
+            android:id="@+id/action_global_fileSwapFragment"
+            app:destination="@id/fileSwapFragment" />
+        <action
+            android:id="@+id/action_global_binFragment"
+            app:destination="@id/binFragment" />
+        <action
+            android:id="@+id/action_global_settingFragment"
+            app:destination="@id/settingFragment" />
+    </navigation>
+    <activity
+        android:id="@+id/epubReaderActivity"
+        android:name="com.itgo.book_cloud.ui.reader.epub.EpubReaderActivity"
+        android:label="activity_reader_epub"
+        tools:layout="@layout/activity_reader_epub" />
+    <activity
+        android:id="@+id/pdfReaderActivity"
+        android:name="com.itgo.book_cloud.ui.reader.pdf.PdfReaderActivity"
+        android:label="activity_reader_pdf"
+        tools:layout="@layout/activity_reader_pdf" />
+    <fragment
+        android:id="@+id/fileSwapFragment"
+        android:name="com.itgo.book_cloud.ui.home.fullview.FileSwapFragment"
+        android:label="fragment_file_swap"
+        tools:layout="@layout/fragment_file_swap" />
+    <fragment
+        android:id="@+id/binFragment"
+        android:name="com.itgo.book_cloud.ui.home.fullview.BinFragment"
+        android:label="fragment_bin"
+        tools:layout="@layout/fragment_bin" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.itgo.book_cloud.ui.home.fullview.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

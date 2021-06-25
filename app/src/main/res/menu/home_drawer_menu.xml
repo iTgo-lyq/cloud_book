@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/group_0">
+        <item
+            android:id="@+id/nav_interests"
+            android:icon="@drawable/baseline_bookmarks_white_24dp"
+            android:title="我的标签" />
+
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@drawable/baseline_library_books_white_24dp"
+            android:title="导入书籍" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/baseline_settings_white_24dp"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_trash"
+            android:icon="@drawable/baseline_restore_from_trash_white_24dp"
+            android:title="回收站" />
+    </group>
+    <group android:id="@+id/group_1">
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/baseline_help_white_24dp"
+            android:title="帮助与反馈" />
+        <item
+            android:id="@+id/nav_gift"
+            android:icon="@drawable/baseline_card_giftcard_white_24dp"
+            android:title="福利社" />
+    </group>
+
+    <group android:id="@+id/group_2">
+
+        <item
+            android:id="@+id/nav_quit"
+            android:icon="@drawable/baseline_input_white_24dp"
+            android:title="退出登录" />
+    </group>
+</menu>

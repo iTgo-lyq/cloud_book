@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/preChapterBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:text="上一章" />
+
+    <ProgressBar
+        android:id="@+id/bookProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:max="100"
+        android:progressBackgroundTint="#ccc" />
+
+    <TextView
+        android:id="@+id/nextChapterBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="下一章" />
+</LinearLayout>

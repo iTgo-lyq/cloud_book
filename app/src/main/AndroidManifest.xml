@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itgo.book_cloud">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STROAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".BookCloudApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Book_cloud"
+        tools:targetApi="n">
+        <activity
+            android:name=".ui.UploadActivity"
+            android:theme="@style/Theme.Book_cloud.StatusBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <service
+            android:name=".common.EpubMediaService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".common.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.reader.epub.EpubReaderActivity"
+            android:theme="@style/Theme.Book_cloud.Reader" />
+        <activity
+            android:name=".ui.interests.InterestsActivity"
+            android:theme="@style/Theme.Book_cloud.StatusBar" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.reader.pdf.PdfReaderActivity" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:theme="@style/Theme.Book_cloud.StatusBar" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Book_cloud.Full">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

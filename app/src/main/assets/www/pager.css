@@ -1,0 +1,43 @@
+:root {
+  --reserve-space: 24px;
+
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  position: relative;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.mask-white-top {
+  display: block;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+}
+
+.mask-white-bottom {
+  display: block;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bookCard"
+    android:layout_width="98dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="start"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:id="@+id/bookGroupItemCover1"
+                android:layout_width="42dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toTopOf="@id/bookGroupItemCover3"
+                app:layout_constraintEnd_toStartOf="@id/bookGroupItemCover2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/book_cover_default" />
+
+            <ImageView
+                android:id="@+id/bookGroupItemCover2"
+                android:layout_width="42dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toTopOf="@id/bookGroupItemCover4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bookGroupItemCover1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/book_cover_default" />
+
+            <ImageView
+                android:id="@+id/bookGroupItemCover3"
+                android:layout_width="42dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bookGroupItemCover4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookGroupItemCover1"
+                app:srcCompat="@drawable/book_cover_default" />
+
+            <ImageView
+                android:id="@+id/bookGroupItemCover4"
+                android:layout_width="42dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bookGroupItemCover3"
+                app:layout_constraintTop_toBottomOf="@id/bookGroupItemCover2"
+                app:srcCompat="@drawable/book_cover_default" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/shelfTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="书架名称"
+        android:textSize="14sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/bookNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="共0本"
+        android:textColor="#ccc"
+        android:textSize="10sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

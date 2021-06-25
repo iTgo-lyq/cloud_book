@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_file_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="搜索"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_cloud"
+        android:icon="@drawable/baseline_import_export_white_24dp"
+        android:title="传输"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@drawable/baseline_menu_white_24dp"
+        android:title="更多"
+        app:showAsAction="ifRoom" />
+</menu>
